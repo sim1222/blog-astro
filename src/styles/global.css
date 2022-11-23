@@ -1,0 +1,88 @@
+/*
+  The CSS in this style tag is based off of Bear Blog's default CSS.
+  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
+  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+}
+h1 {
+	@apply text-4xl font-bold py-3;
+}
+h2 {
+	@apply text-3xl font-bold py-2;
+}
+h3 {
+	@apply text-2xl font-bold py-1;
+}
+h4 {
+	@apply text-xl font-bold;
+}
+h5 {
+	@apply text-lg font-bold;
+}
+h6 {
+	@apply text-base font-bold;
+}
+
+p {
+	@apply text-base p-2;
+}
+
+strong,
+b {
+	@apply font-bold;
+}
+a {
+	@apply text-blue-500;
+}
+nav a {
+	margin-right: 10px;
+}
+textarea {
+	width: 100%;
+	font-size: 16px;
+}
+
+ul {
+	@apply list-disc list-inside;
+}
+ol {
+	@apply list-decimal list-inside;
+}
+li {
+	@apply p-2 pl-5;
+}
+
+hr {
+	@apply my-3;
+}
+
+input {
+	font-size: 16px;
+}
+content {
+	line-height: 1.6;
+}
+table {
+	@apply w-full;
+}
+img {
+	@apply max-w-full h-auto;
+}
+code {
+	@apply bg-gray-900 p-1 text-white rounded-md;
+}
+pre {
+	@apply p-4 rounded-md;
+}
+pre > code {
+	all: unset;
+}
+blockquote {
+	@apply border-solid border-l-4 border-gray-300 italic p-2 bg-gray-700;
+}
+

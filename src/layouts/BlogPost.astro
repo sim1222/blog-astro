@@ -1,0 +1,99 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+export interface Props {
+	content: {
+		title: string;
+		description: string;
+		pubDate?: string;
+		updatedDate?: string;
+		heroImage?: string;
+	};
+}
+
+const {
+	content: { title, description, pubDate, updatedDate, heroImage },
+} = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+		<style>
+			/* .title {
+				font-size: 2em;
+				margin: 0.25em 0 0;
+			}
+			hr {
+				border-top: 1px solid #ddd;
+				margin: 1rem 0;
+			} */
+		</style>
+	</head>
+
+	<body>
+		<Header />
+		<main>
+			<style is:global >
+				/* .markdown-body ul {
+					@apply list-disc list-inside pl-4 mb-4;
+				}
+				.markdown-body h1,
+				h2,
+				h3 {
+					@apply font-bold mb-4;
+				}
+				.markdown-body h1,
+				h2 {
+					@apply border-b-2 border-solid border-gray-200;
+				}
+				.markdown-body h1 {
+					@apply text-3xl pb-2;
+				}
+				.markdown-body h2 {
+					@apply text-2xl;
+				}
+				.markdown-body h3 {
+					@apply text-lg;
+				}
+				.markdown-body p {
+					@apply mb-4;
+				}
+				.markdown-body a {
+					@apply text-blue-500;
+				}
+				.markdown-body {
+					margin: auto;
+					padding: 20px;
+					@apply max-w-3xl;
+					text-align: left;
+					word-wrap: break-word;
+					overflow-wrap: break-word;
+					line-height: 1.5;
+					color: #444;
+				} */
+			</style>
+			<article class="max-w-3xl mx-auto">
+				{
+					heroImage && (
+						<img width={720} height={360} src={heroImage} alt="" />
+					)
+				}
+				<h1 class="title">{title}</h1>
+				{pubDate && <time>{pubDate}</time>}
+				{
+					updatedDate && (
+						<div>
+							Last updated on <time>{updatedDate}</time>
+						</div>
+					)
+				}
+				<hr />
+				<slot />
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>
