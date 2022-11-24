@@ -15,6 +15,6 @@ import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://blog.sim1222.com',
   integrations: [mdx(), sitemap(), tailwind(), compress(), partytown()]
 });
