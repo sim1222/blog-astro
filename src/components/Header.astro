@@ -1,6 +1,7 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../config";
+import { Icon } from 'astro-icon'
 ---
 
 <header>
@@ -17,9 +18,24 @@ import { SITE_TITLE } from "../config";
 						Social
 						<svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
 					</a>
-					<ul class="p-2 bg-base-100">
-						<li><a href="https://twitter.com/_kokt">Twitter</a></li>
-						<li><a href="https://github.com/sim1222">Twitter</a></li>
+					<ul class="p-2 bg-base-100 drop-shadow-lg list-outside right-0">
+						<li class=""><a href="https://twitter.com/_kokt" target="_blank"><Icon name="mdi:twitter" class="w-6" />Twitter</a></li>
+						<li class=""><a href="https://github.com/sim1222" target="_blank"><Icon name="mdi:github" class="w-6" />GitHub</a></li>
+						<li class=""><a href="https://simkey.net/@_kokt" target="_blank"><Icon name="arcticons:misskey" class="w-6" />Misskey</a></li>
+						<li class=""><a href="https://www.youtube.com/channel/UCW1wsNm-g0BfIanV77fylkQ" target="_blank"><Icon name="mdi:youtube" class="w-6" />Youtube</a></li>
+						<li class=""><div class="tooltip tooltip-left tooltip-info flex" data-tip="Copy to clipboard"><Icon name="ic:baseline-discord" class="w-6" />Discord</div></li>
+					</ul>
+				</li>
+				<li tabindex="0">
+					<a>
+						Games
+						<svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
+					</a>
+					<ul class="p-2 bg-base-100 drop-shadow-lg list-outside right-0">
+						<li class=""><a href="https://vrchat.com/home/user/usr_8a5fbace-5920-4fbe-a4ad-7d5cad57f1c7" target="_blank"><Icon name="mdi:github" class="w-6" />VRChat</a></li>
+						<li class=""><a href="https://osu.ppy.sh/users/12164975" target="_blank"><Icon name="simple-icons:osu" class="w-6" />osu!</a></li>
+						<li class=""><div class="tooltip tooltip-left tooltip-info flex" data-tip="Copy to clipboard"><Icon name="arcticons:genshin-impact" class="w-6" />Genshin Impact</div></li>
+						<li class=""><div class="tooltip tooltip-left tooltip-info flex" data-tip="Copy to clipboard"><Icon name="mdi:steam" class="w-6" />Steam</div></li>
 					</ul>
 				</li>
 			</ul>

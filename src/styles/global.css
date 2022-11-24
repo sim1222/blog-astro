@@ -47,15 +47,15 @@ textarea {
 	font-size: 16px;
 }
 
-ul {
+/* ul {
 	@apply list-disc list-inside;
-}
+} */
 ol {
 	@apply list-decimal list-inside;
 }
-li {
-	@apply p-2 pl-5;
-}
+/* li {
+	@apply p-2;
+} */
 
 hr {
 	@apply my-3;
